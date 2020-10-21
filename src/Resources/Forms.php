@@ -16,7 +16,7 @@ class Forms extends Resource
      */
     public function submit($portal_id, $form_guid, array $form)
     {
-        $endpoint = "https://forms.hubspot.com/submissions/v3/integration/submit/{$portal_id}/{$form_guid}";
+        $endpoint = "https://api.hsforms.com/submissions/v3/integration/submit/{$portal_id}/{$form_guid}";
 
         return $this->client->request('post', $endpoint, ['json' => $form], null, false);
     }
